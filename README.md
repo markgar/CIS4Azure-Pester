@@ -1,9 +1,11 @@
 # CIS4Azure-Pester
-An implementation of the CIS 4 Azure controls using Pester testing of ARM templates.
+[CIS4Azure-Pester](https://www.nuget.org/packages/CIS4Azure.Tests.Pester/) is an implementation of the [CIS 4 Azure](https://azure.microsoft.com/en-us/resources/cis-microsoft-azure-foundations-security-benchmark/) controls using [Pester](https://github.com/pester/Pester) testing of [ARM templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates).
 
-CIS is the Center for Internet Security and this group has written some prescriptive security suggestions for multiple clouds, including Azure.  
+[CIS](https://www.cisecurity.org/benchmark/azure/) is the Center for Internet Security and this group has written some prescriptive security suggestions for multiple clouds, including Azure.  
 
-Pester is a testing framework for Powershell that is capable of describing assertions and outputting NUnitXml results, which Azure DevOps can pull into the pipline to show test results.
+[Pester](https://github.com/pester/Pester) is a testing framework for Powershell that is capable of describing assertions and outputting NUnitXml results, which Azure DevOps can pull into the pipline to show test results.  This brings auditability of infrastructure deployments showing template deployment along side logging of successful tests.
+
+[Powershell](https://github.com/powershell/powershell) is an open source, cross platform, object based scripting language.
 
 The CIS4Azure-Pester project pulls these two together to provide a testing framework to test Azure ARM templates before they are deployed to an Azure environment.  This ensures that Azure Inrastructure deployments are CIS Benchmark compliant as early in the process as possible.  Developers recieve feedback during the build phase of the project - as early as possible.
 
