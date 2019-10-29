@@ -1,0 +1,36 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: $(Rev:r)
+
+variables:
+  Major: 1
+  Minor: 1
+  Patch: $[counter(format('{0}.{1}', variables['Major'], variables['Minor'], 0))]
+  Version: '$(Major).$(Minor).$(Patch)-preview'
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NuGetCommand@2
+  displayName: Pack NuGet package
+  inputs:
+    command: 'pack'
+    packagesToPack: 'CIS4Azure.Tests.Pester.nuspec'
+    versioningScheme: byEnvVar
+    versionEnvVar: 'Version'
+
+- task: NuGetCommand@2
+  displayName: Push Pester Tests NuGet Package to Azure Artifacts
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'sample-pester-tests'
+
