@@ -24,7 +24,7 @@ steps:
     command: 'pack'
     packagesToPack: 'CIS4Azure.Tests.Pester.nuspec'
     versioningScheme: byEnvVar
-    versionEnvVar: 'Version'
+    versionEnvVar: '1.1.0'
 
 - task: NuGetCommand@2
   displayName: Push Pester Tests NuGet Package to Azure Artifacts
