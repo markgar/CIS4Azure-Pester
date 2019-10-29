@@ -8,8 +8,7 @@ name: $(Rev:r)
 variables:
   Major: 1
   Minor: 1
-  Patch: $[counter(format('{0}.{1}', variables['Major'], variables['Minor'], 0))]
-  Version: '$(Major).$(Minor).$(Patch)-preview'
+  Version: '1.1.1-preview'
 
 trigger:
 - master
@@ -24,7 +23,7 @@ steps:
     command: 'pack'
     packagesToPack: 'CIS4Azure.Tests.Pester.nuspec'
     versioningScheme: byEnvVar
-    versionEnvVar: '1.1.0'
+    versionEnvVar: 'Version
 
 - task: NuGetCommand@2
   displayName: Push Pester Tests NuGet Package to Azure Artifacts
