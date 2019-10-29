@@ -1,6 +1,4 @@
 # Starter pipeline
-
-
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -37,6 +35,6 @@ steps:
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '0c9f7885-2a77-4783-b820-e802e8a5c872/7c987d4d-459a-4f98-921c-c1f41db79528'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'nuget.org TJS CIS view'
 
