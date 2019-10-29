@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <!-- Required elements-->
-        <id>CIS4Azure.Tests.Pester</id>
+        <id>CIS4Azure.Tests.Pester.TJS</id>
         <version>1.1.0</version>
         <description>This is a suite of tests written using Pester (Powershell) that allows for testing of infrastructure against the CIS Benchmark for Azure at build-time.</description>
         <authors>mgarner</authors>
