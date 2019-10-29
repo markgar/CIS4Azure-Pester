@@ -8,7 +8,7 @@
         <authors>mgarner</authors>
 
         <!-- Optional elements -->
-        <license type="file">LICENSE</license>
+        <license type="expression">MIT</license>
         <!-- ... -->
     </metadata>
     
