@@ -10,6 +10,7 @@
         <!-- Optional elements -->
         <!-- ... -->
     </metadata>
+    <license type="file">LICENSE</license>
     <files>
         <file src="pester/1.Identity.Tests.ps1" target="1.Identity.Tests.ps1" />
         <file src="pester/2.SecurityCenter.Tests.ps1" target="2.SecurityCenter.Tests.ps1" />
