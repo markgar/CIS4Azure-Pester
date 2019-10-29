@@ -15,25 +15,25 @@ $template = ConvertFrom-Json -InputObject $templateARM -ErrorAction SilentlyCont
 
 Describe 'CIS Benchmark for Azure' {
   
-  Context '6 Networking - Level 1' {
-    It -Pending "6.1 - Ensure that RDP access is restricted from the internet" {
-      # need a test here
-    }
-   
-   It -Pending "6.2 - Ensure that SSH access is restricted from the internet" {
-      # need a test here
-    }
-   
-   It -Pending "6.3 - Ensure that SQL server access is restricted from the internet" {
-      # need a test here
-    }
-   
-   It -Pending "6.5 - Ensure that Network Watcher is 'Enabled'" {
-      # need a test here
-    }
-      
-    # TODO: determine if we need to loop through a list of resources    
-    # }
+  Context '8 Other Security Considerations - Level 1' {
     
+    It -Pending "8.1 - Ensure that the expiry date is set on all Keys" {
+      # need a test here
+    }
+   
+   It -Pending "8.2 - Ensure that the expiry date is set on all Secrets" {
+      # need a test here
+    } 
+   
   }
+  
+  Context '8 Other Security Considerations - Level 2' {
+    
+    It -Pending "8.3	- Ensure that Resource Locks are set for mission critical Azure resources" {
+      # need a test here
+    }
+   
+  }
+  
+
 }

@@ -55,4 +55,66 @@ Describe 'CIS Benchmark for Azure' {
     # }
     
   }
+
+  Context '1 Identity and Access Management - Level 2' {
+      It -Pending "1.2 - Ensure that multi-factor authentication is enabled for all non-privileged users" {
+        # need a test here
+      }
+    
+    It -Pending "1.4 - Ensure that 'Allow users to remember multi-factor authentication on devices they trust' is 'Disabled'" {
+        # need a test here
+      }
+    
+    It -Pending "1.8 - Ensure that 'Notify all admins when other admins reset their password?' is set to 'Yes'" {
+        # need a test here
+      }
+    
+    It -Pending "1.9 - Ensure that 'Users can consent to apps accessing company data on their behalf' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.10 - Ensure that 'Users can add gallery apps to their Access Panel' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.11 - Ensure that 'Users can register applications' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.12 - Ensure that 'Guest users permissions are limited' is set to 'Yes'" {
+        # need a test here
+      }
+    
+    It -Pending "1.13 - Ensure that 'Members can invite' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.14 - Ensure that 'Guests can invite' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.16 - Ensure that 'Self-service group management enabled' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.17 - Ensure that 'Users can create security groups' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.18 - Ensure that 'Users who can manage security groups' is set to 'None'" {
+        # need a test here
+      }
+    
+    It -Pending "1.19 - Ensure that 'Users can create Office 365 groups' is set to 'No'" {
+        # need a test here
+      }
+    
+    It -Pending "1.20 - Ensure that 'Users who can manage Office 365 groups' is set to 'None'" {
+        # need a test here
+      }
+    
+    It -Pending "1.23 - Ensure that no custom subscription owner roles are created" {
+        # need a test here
+      }   
+  }
 }

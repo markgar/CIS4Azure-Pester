@@ -100,4 +100,10 @@ Describe 'CIS Benchmark for Azure' {
     # }
     
   }
+
+  Context '2 Security Center - Level 1' {
+    It -Pending "2.1 - Ensure that standard pricing tier is selected" {
+      # need a test here
+    }
+  }
 }
