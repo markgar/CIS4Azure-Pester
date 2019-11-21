@@ -1,6 +1,10 @@
-name: CI
+name: Create Module, Push to Powershell Gallery
 
-on: [push]
+on:
+  push:
+    paths:
+    - 'pester/CIS4Azure.Tests.ps1'
+    - '.github/workflows/push-to-PowershellGallery.yml'
 
 jobs:
   build:
@@ -9,9 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Create Module, Push to PSGallery
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        Publish-Script -Name 'CIS4Azure' -Path './pester/CIS4Azure.Tests.ps1' -NuGetApiKey '${{ secrets.cis4azure_powershell_gallery_api_key }}'
+      shell: pwsh
