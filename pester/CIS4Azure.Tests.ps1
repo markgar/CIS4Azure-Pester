@@ -1,3 +1,43 @@
+
+<#PSScriptInfo
+
+.VERSION 0.0.1
+
+.GUID 026e99cd-b540-440b-bcd9-4868e2b7f1da
+
+.AUTHOR Mark Garner
+
+.COMPANYNAME
+
+.COPYRIGHT
+
+.TAGS
+
+.LICENSEURI
+
+.PROJECTURI
+
+.ICONURI
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS
+
+.EXTERNALSCRIPTDEPENDENCIES
+
+.RELEASENOTES
+
+
+.PRIVATEDATA
+
+#>
+
+<# 
+
+.DESCRIPTION 
+ CIS4Azure 
+
+#> 
 param (
     [Parameter(Mandatory = $true)]
     [string]$TemplatePath 
@@ -40,7 +80,7 @@ function Test-StorageContainers {
 
     # loop through these items
     foreach ($container in $ContainersToTest) {
-        
+
         It "3.7 - Ensures that 'Public access level' is set to Private for blob containers" {
             $expectedValue = "None"
             $templateProperty = $container.properties.publicAccess

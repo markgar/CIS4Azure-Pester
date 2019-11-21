@@ -1,4 +1,4 @@
-name: Create Module, Push to Powershell Gallery
+name: Create Push to Powershell Gallery
 
 on:
   push:
